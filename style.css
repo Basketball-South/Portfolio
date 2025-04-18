@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*PC、スマホ共通スタイル*/
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/*ヘッダー*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a5a5a51a;
+}
+/*ロゴ*/
+#logo {
+  height: 60%;
+  width: 60%;
+}
+
+/*ナビゲーションレイアウト*/
+#nav-pc {
+  font-size: 14px;
+  display: flex;
+  padding-right: 50px;
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/*メインビジュアル*/
+#main-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin: 30px;
+}
+#main-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  h1 {
+    font-size: 60px;
+    margin: 0;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 10px auto;
+  }
+  p {
+    font-size: 28px;
+    margin: 0 auto;
+  }
+}
+#main-img {
+  width: auto;
+  height: 90%;
+  margin-left: 50px;
+}
+
+/*Works*/
+/*見出し共通*/
+.index-h2 {
+  text-decoration: underline;
+  text-decoration-color: #ff7d8a7d;
+  text-decoration-thickness: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* 作品挿入　*/
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 20px;
+  grid-template-rows: 250px 250px;
+  justify-content: center;
+}
+.box {
+  background: #a5a5a51a;
+ padding: 10px;
+ border-radius: 10px;
+}
+
+/*About*/
+#about-main {
+  display: flex;
+}
+#about-img {
+  width: 50%;
+  height: 50%;
+}
+#about-message {
+  margin: auto;
+}
+
+/*Contact*/
+#contact-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*メアドコピー*/
+.email-container {
+  display: flex;
+  align-items: center;
+}
+
+.email {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* コピーボタンのスタイル */
+.copy-btn {
+  color: black;
+  padding: 0px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.copy-btn:hover {
+  background-color: #cacaca7d;
+}
+
+/* コピー完了メッセージ */
+.message {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: rgb(87, 87, 87);
+}
+#email-main {
+  display: flex;
+}
+#sns-logo {
+  margin-top: 30px;
+  a {
+  margin-left: 20px;
+  color: black;
+  }
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  background-color: #a5a5a51a;
+  margin-top: 100px;
+  padding-top: 30px;
+}
+#footer-link {
+  a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+#copyright {
+  font-size: 10px;
+}
