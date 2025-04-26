@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Googleフォント-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body>
+  <!--ヘッダー-->
+  <header>
+    <!--ロゴ-->
+    <a href="index.html">
+      <img id="logo" src="imag/logo4.png" alt="トップページに戻る">
+    </a>
+
+    <!--ナビゲーション-->
+    <nav>
+      <ul id="nav-pc">
+        <li><a href="index.html#works" alt="Worksへのリンク">Works</a></li>
+        <li><a href="index.html#about" alt="Aboutへのリンク">About</a></li>
+        <li><a href="index.html#contact" alt="Contactへのリンク">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <main>
+      <!--メインビジュアル-->
+      <section id="main-visual">
+        <div id="main-message">
+          <p>web designer</p>
+          <h1>Minami Sato</h1>
+          <h3>シンプルの中に無限の表現を。</h3>
+        </div>
+        <img id="main-img"  src="imag/main-visual.png" alt="一輪の花をもった女の子のイラスト">
+      </section>
+
+      <!--Works-->
+      <section id="works">
+        <h2 class="index-h2">Works</h2>
+        <div class="container">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </section>
+
+      <!--About-->
+      <section id="about">
+        <h2 class="index-h2">About</h2>
+        <div id="about-main">
+          <img id="about-img" src="imag/about.png" alt="本人の写真">
+          <div id="about-message">
+            <h3>さとう みなみ</h3>
+            <p>私は、「シンプルで伝わりやすいデザイン」をモットーに、ユーザーに寄り添ったWebデザインを心がけています。
+            <br>情報が直感的に伝わるデザインを追求しています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Contact-->
+      <section id="contact">
+        <h2 class="index-h2">Contact</h2>
+        <div id="contact-message">
+          <p>お気軽にご相談ください</p>
+
+          <div id="email-main">
+          <div class="email-container">
+            <span class="email" id="email">example@example.com</span>
+            <button class="copy-btn" id="copyBtn">コピー</button>
+          </div>
+        
+          <p class="message" id="message"></p>
+        
+          </div>
+
+          <div id="sns-logo">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <a href="https://instagram.com/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="https://x.com/"><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    <div id="footer-logo">
+      <a href="index.html">
+        <img src="imag/logo.png" alt="ポートフォリオのロゴ">
+      </a>
+    </div>
+
+    <div id="footer-link">
+      <a href="index.html#works" alt="Worksへのリンク">Works</a>
+      <a href="index.html#about" alt="Aboutへのリンク">About</a>
+      <a href="index.html#contact" alt="Contactへのリンク">Contact</a>
+    </div>
+
+    <p id="copyright">&copy;2025 Minami.All Rights Reserved.</p>
+  </footer>
+
+
+  <script>
+    // コピー機能の実装
+    document.getElementById("copyBtn").addEventListener("click", function() {
+      var emailText = document.getElementById("email").innerText;
+
+      // 一時的なテキストエリアを作成してメールアドレスをコピー
+      var tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = emailText;
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      // コピー完了メッセージの表示
+      document.getElementById("message").textContent = "完了！";
+    });
+  </script>
+
+</body>
+</html>
