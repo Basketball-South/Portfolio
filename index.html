@@ -6,6 +6,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--ファビコン-->
+  <link rel="icon" href="imag/logo.png" type="image/png">
+  
   <!--Googleフォント-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,14 +83,18 @@
           <p>お気軽にご相談ください</p>
 
           <div id="email-main">
-          <div class="email-container">
-            <span class="email" id="email">example@example.com</span>
-            <button class="copy-btn" id="copyBtn">コピー</button>
+            <div class="email-container">
+              <span class="email" id="email">example@example.com</span>
+              <div class="copy-area">
+                <button class="copy-btn" id="copyBtn">コピー</button>
+                <div class="copy-message" id="copyMessage">\完了/</div>
+              </div>
+            </div>
           </div>
-        
+                          
           <p class="message" id="message"></p>
         
-          </div>
+          
 
           <div id="sns-logo">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -116,21 +123,23 @@
 
 
   <script>
-    // コピー機能の実装
     document.getElementById("copyBtn").addEventListener("click", function() {
-      var emailText = document.getElementById("email").innerText;
+  var emailText = document.getElementById("email").innerText;
 
-      // 一時的なテキストエリアを作成してメールアドレスをコピー
-      var tempInput = document.createElement("input");
-      document.body.appendChild(tempInput);
-      tempInput.value = emailText;
-      tempInput.select();
-      document.execCommand("copy");
-      document.body.removeChild(tempInput);
+  // 一時的なテキストエリアを作成してコピー
+  var tempInput = document.createElement("input");
+  document.body.appendChild(tempInput);
+  tempInput.value = emailText;
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
 
-      // コピー完了メッセージの表示
-      document.getElementById("message").textContent = "完了！";
-    });
+  // 「完了！」メッセージ表示
+  var copyMessage = document.getElementById("copyMessage");
+  copyMessage.style.display = "block";
+
+});
+
   </script>
 
 </body>
