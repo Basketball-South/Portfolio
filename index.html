@@ -126,7 +126,7 @@
     document.getElementById("copyBtn").addEventListener("click", function() {
   var emailText = document.getElementById("email").innerText;
 
-  // 一時的なテキストエリアを作成してコピー
+  
   var tempInput = document.createElement("input");
   document.body.appendChild(tempInput);
   tempInput.value = emailText;
@@ -134,7 +134,7 @@
   document.execCommand("copy");
   document.body.removeChild(tempInput);
 
-  // 「完了！」メッセージ表示
+ 
   var copyMessage = document.getElementById("copyMessage");
   copyMessage.style.display = "block";
 
